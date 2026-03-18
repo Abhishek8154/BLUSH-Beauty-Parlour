@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap');
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Poppins", sans-serif;
+  
+  --color-blush-50: #fff5f6;
+  --color-blush-100: #ffe6e9;
+  --color-blush-200: #ffccd4;
+  --color-blush-300: #ffa3b0;
+  --color-blush-400: #ff7a8c;
+  --color-blush-500: #ff5268;
+  --color-blush-600: #f53d55;
+  --color-blush-700: #d42c42;
+  --color-blush-800: #b02437;
+  --color-blush-900: #912131;
+  
+  --color-gold: #d4af37;
+  --color-beige: #f5f5dc;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-gray-800 bg-blush-50;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.glass {
+  @apply bg-white/80 backdrop-blur-md border border-white/20;
+}
+
+.section-padding {
+  @apply py-20 px-6 md:px-12 lg:px-24;
+}
+
+.btn-primary {
+  @apply bg-blush-500 text-white px-8 py-3 rounded-full font-medium transition-all hover:bg-blush-600 hover:shadow-lg active:scale-95;
+}
+
+.btn-outline {
+  @apply border-2 border-blush-500 text-blush-500 px-8 py-3 rounded-full font-medium transition-all hover:bg-blush-500 hover:text-white active:scale-95;
+}
